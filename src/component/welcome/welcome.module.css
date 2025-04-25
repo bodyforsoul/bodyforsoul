@@ -1,0 +1,143 @@
+.welcomeContent {
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+  z-index: 1;
+  height: 900px;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  text-align: center;
+  overflow: hidden; 
+  overflow-x: hidden !important;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #444;
+  max-width: 600px;
+}
+
+.logoWrapper {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fastLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; 
+  justify-content: center;
+  padding: 0 1rem; 
+  box-sizing: border-box;
+}
+
+.linkCircle {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.linkIcon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.wbLink {
+  border-color: #a100ff;
+}
+
+.ozonLink {
+  border-color: #007bff;
+}
+
+.linkCircle:hover .linkIcon {
+  transform: scale(1.2);
+}
+
+
+.greenSpheres {
+  position: absolute;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.sphere {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  max-width: 40vw;
+  max-height: 40vw;
+  background: radial-gradient(circle, rgba(0, 255, 120, 0.4), transparent);
+  border-radius: 50%;
+  filter: blur(10px);
+  transition: transform 0.1s ease-out;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .fastLinks {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .sphere {
+    width: 100px;
+    height: 100px;
+  }
+}
