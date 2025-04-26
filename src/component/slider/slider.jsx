@@ -13,19 +13,25 @@ const items = [
     img: chlorImg,
     topic: 'Хлорофил',
     intro: 'Хлорофилл жидкий шпинатный – это простой и удобный инструмент ежедневной поддержки красоты и здоровья организма! Это внутренний дезодорант для организма.',
-    detail: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi...',
+    detail: 'Жидкий хлорофилл представляет собой зеленый пигмент, содержащийся в растениях, а соответственно восполняет дефицит зелени в рационе питания в течении дня. Активно используется как вспомогательное вещество от раковых новообразований, а также для очищения организма. Его рекомендуют пить в реабилитационный период, в том числе после перенесенных инфекционных заболеваний. Хлорофилл укрепляет иммунитет, снижает воспаления, что важно в период орви и простудных заболеваний. Используется для лечения и профилактики заболеваний суставов, артрите, а также при мышечных болях. ',
+    ozonlink: 'https://www.ozon.ru/product/hlorofill-zhidkiy-1740811511/?_bctx=CAQQ7MOTAQ&at=Y7tjVlvYQI0LmWmmij0rJkDHX1Pj3ztNlm7REsADWWD3&hs=1',
+    wblink: 'https://www.wildberries.ru/catalog/274437798/detail.aspx',
   },
   {
     img: chlorImg,
     topic: 'Хлорофил',
-    intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque...',
-    detail: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi...',
+    intro: 'Хлорофилл жидкий шпинатный – это простой и удобный инструмент ежедневной поддержки красоты и здоровья организма! Это внутренний дезодорант для организма.',
+    detail: 'Жидкий хлорофилл представляет собой зеленый пигмент, содержащийся в растениях, а соответственно восполняет дефицит зелени в рационе питания в течении дня. Активно используется как вспомогательное вещество от раковых новообразований, а также для очищения организма. Его рекомендуют пить в реабилитационный период, в том числе после перенесенных инфекционных заболеваний. Хлорофилл укрепляет иммунитет, снижает воспаления, что важно в период орви и простудных заболеваний. Используется для лечения и профилактики заболеваний суставов, артрите, а также при мышечных болях. Chlorofill BodyForSoul создает детокс эффект, а соответственно очищает кишечник и весь организм от патогенов, уменьшает тягу к сладкому, а за счет нормализации пищеварения снижается вес и аппетит. Дренажный напиток уменьшает отеки,  повышает уровень кислорода в крови, происходит антиоксидантное действие на клеточном уровне, за счет чего организм замедляется старение, происходит нормализация работы сердечно-сосудистой системы. ',
+    ozonlink: 'https://www.ozon.ru/product/hlorofill-zhidkiy-1740811511/?_bctx=CAQQ7MOTAQ&at=Y7tjVlvYQI0LmWmmij0rJkDHX1Pj3ztNlm7REsADWWD3&hs=1',
+    wblink: 'https://www.wildberries.ru/catalog/274437798/detail.aspx',
   },
   {
     img: rosmarinImg,
     topic: 'Розмариновая кислота',
-    intro: 'Розмариновая кислота в капсулах это мощный антиоксидант природного происхождения...',
-    detail: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi...',
+    intro: 'Розмариновая кислота в капсулах это мощный антиоксидант природного происхождения, обладающий противоопухолевым, противовирусным, антиалергическим, противовспалительным, антиоксидантным действием.',
+    detail: 'Розмариновая кислота и входящая в состав, супероксиддисмутаза защищают клетки от повреждений свободными радикалами, помогают бороться с окислительным стрессом и замедлять процессы старения клеток за счет чего Rosmarin Aсid уэффективно омолаживает кожу, повышает ее упругость , эластичность, увлажненность. Помогает справится с акне, дерматитами, выпадением волос, ломкостью ногтей, целлюлитом, псориазом, сухостью кожи, лишним весом, пигментацией Данная пищевая добавка активно используется и хорошо зарекомендовала себя в лечении и профилактике таких заболеваний как артрит, подагра, атопический дерматит, колит, нарушение репродуктивных функций (эндометриоз, спкя, сгустки, гормональный сбой, болезненые менструации) Нарушение работы ЖКТ (воспаление поджелудочной, сахарный диабет, гастрит, интоксикация печени).',
+    ozonlink: 'https://www.ozon.ru/product/rozmarinovaya-kislota-1760661304/?_bctx=CAQQ7MOTAQ&at=VvtzqyEB7flWkkVLHrGW0YLsQrxXyDilK1L8lSEQ60zZ&hs=1',
+    wblink: 'https://www.wildberries.ru/catalog/286291721/detail.aspx',
   },
 ];
 
@@ -93,19 +99,14 @@ const Carousel = () => {
             <div className="detail">
               <div className="title">{item.topic}</div>
               <div className="des">{item.detail}</div>
-              {/* <div className="checkout">
-                <button>ADD TO CART</button>
-                <button>CHECKOUT</button>
-              </div> */}
-                    <div className="fastLinks">
-                      <a href="https://www.wildberries.ru/seller/1158449" className="linkCircle wbLink">
-                        {/* <img src={Wb} alt="Wildberries" className="linkIcon" /> */}
+                <div className="fastLinks">
+                    <a href={item.wblink} className="linkCircle wbLink" target="_blank" rel="noopener noreferrer">
                         WB
-                      </a>
-                      <a href="https://www.ozon.ru/seller/bodyforsoul-2417132/?miniapp=seller_2417132" className="linkCircle ozonLink">
+                    </a>
+                    <a href={item.ozonlink} className="linkCircle ozonLink" target="_blank" rel="noopener noreferrer">
                         Ozon
-                      </a>
-                    </div>
+                    </a>
+                </div>
             </div>
           </div>
         ))}

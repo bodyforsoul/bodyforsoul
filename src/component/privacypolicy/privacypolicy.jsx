@@ -65,16 +65,12 @@ const PrivacyPolicy = () => {
       <section>
         <h2>• Контактная информация</h2>
         <div className="contact-item">
-          <img src={locationIcon} alt="Адрес" className="icon" />
-          <span>г. Москва, ул. Примерная, д. 1</span>
-        </div>
-        <div className="contact-item">
           <img src={phoneIcon} alt="Телефон" className="icon" />
-          <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+          <a href="tel:+79991234567">+7 (982) 340-88-82</a>
         </div>
         <div className="contact-item">
           <img src={emailIcon} alt="Email" className="icon" />
-          <a href="mailto:example@domain.com">example@domain.com</a>
+          <a href="mailto:example@domain.com">bodyforsoul@mail.ru</a>
         </div>
       </section>
 
